@@ -1,3 +1,7 @@
+:root {
+  --blue-dark: #046e9d;
+}
+
 body {
   max-width: 940px;
   margin: 0 auto;

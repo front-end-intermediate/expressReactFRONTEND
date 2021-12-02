@@ -1,13 +1,21 @@
 import React from "react";
 import Recipe from "./Recipe";
+import FormCreateRecipe from "./FormCreateRecipe";
 
-function Recipes({ recipes }) {
+import RecipesContext from "./RecipesContext";
+
+function Recipes({ loggedin, addRecipe }) {
   return (
-    <summary>
-      {recipes.map((recipe) => (
-        <Recipe key={recipe._id} recipe={recipe} />
-      ))}
-    </summary>
+    <RecipesContext.Consumer>
+      {(recipes) => (
+        <summary>
+          {loggedin && <FormCreateRecipe addRecipe={addRecipe} />}
+          {recipes.map((recipe) => (
+            <Recipe key={recipe._id} recipe={recipe} />
+          ))}
+        </summary>
+      )}
+    </RecipesContext.Consumer>
   );
 }
 
