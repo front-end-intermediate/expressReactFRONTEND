@@ -1,3 +1,8 @@
+:root {
+  --corp-blue: #007eb6;
+  --corp-btn: #03628d;
+}
+
 body {
   max-width: 940px;
   margin: 0 auto;
