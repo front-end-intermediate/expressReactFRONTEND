@@ -11,6 +11,8 @@ function RecipeDetail(props) {
       <img src={`/img/${thisRecipe.image}`} alt={thisRecipe.title} />
       <h1>{thisRecipe.title}</h1>
       <p>{thisRecipe.description}</p>
+      <h3>Instructions</h3>
+      <p>{thisRecipe.instructions}</p>
       <Link to="/">Home</Link>
     </div>
   );
